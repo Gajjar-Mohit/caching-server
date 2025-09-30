@@ -10,3 +10,5 @@ caching-proxy --port <number> --origin <url>
 caching-proxy --port <number> --origin <url>
 
 caching-proxy --clear-cache
+
+docker build -t caching-server:latest . && docker run -p 3001:3001 caching-server:latest --port 3001 --origin https://dummyjson.com/
