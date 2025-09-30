@@ -1,14 +1,5 @@
-You are required to build a CLI tool that starts a caching proxy server, it will forward requests to the actual server and cache the responses. If the same request is made again, it will return the cached response instead of forwarding the request to the server.
 
-caching-proxy --port <number> --origin <url>
+local command: docker build -t caching-server:latest . && docker run -p 3001:3001 caching-server:latest --port 3001 --origin https://dummyjson.com/
+live docker hub command: docker run -p 3001:3001 gajjarmohit/caching-server:latest --port 3001 --origin https://dummyjson.com/
 
---port is the port on which the caching proxy server will run.
-
---origin is the URL of the server to which the requests will be forwarded.
-
-
-caching-proxy --port <number> --origin <url>
-
-caching-proxy --clear-cache
-
-docker build -t caching-server:latest . && docker run -p 3001:3001 caching-server:latest --port 3001 --origin https://dummyjson.com/
+docker pull gajjarmohit/caching-server:latest
